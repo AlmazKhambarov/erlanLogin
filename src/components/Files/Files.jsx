@@ -46,18 +46,14 @@ const Files = ({user}) => {
       if (file && userUid) {
         dispatch(uploadFile({file,userUid}));
       }
-    };
-
+    }
     useEffect(()=>{
-      if(loadingFiles==='fullfiled'){
-        alert("Done")
-        console.log(loadingFiles)
         setOpen(false)
-      }
       auth.onAuthStateChanged((user)=>{
         setUserUid(user)
       })
     }, [])
+
   return (
     <>
 <Button onClick={handleOpen} className='uploadBtn'>Upload</Button>
@@ -68,16 +64,15 @@ const Files = ({user}) => {
   aria-describedby="modal-modal-description"
 >
   <Box sx={style}>
-  <form onSubmit={handleSubmit}>
-       <div>
-        <label for="formFileLg" class="form-label">Select a file</label>
-        <input className="form-control form-control-lg" id="formFileLg" type="file" onChange={handleFileChange}/>
-       </div>
-       <div>
-        <button className='btn btn-primary'>Upload</button>
-        {loading? <h3>Uploading...</h3>:<h3>Done</h3>}
-       </div>
-      </form> 
+   <form onSubmit={handleSubmit}>
+  <div>
+   <label for="formFileLg" class="form-label">Select a file</label>
+   <input className="form-control form-control-lg" id="formFileLg" type="file" onChange={handleFileChange}/>
+  </div>
+  <div>
+   <button className='btn btn-primary'>Upload</button>
+  </div>
+ </form>
   </Box>
 </Modal>
 <div className='dropdown_container'>

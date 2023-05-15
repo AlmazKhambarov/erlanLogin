@@ -3,9 +3,8 @@ import { fetchUserFile, fetchUserFiles, uploadFile } from "../extraReducer";
 
 const initialState = {
   userFiles:[],
-  loading:null,
+  loading:false,
   error:null,
-  loadingFiles:null
 }
 
 const filesSlice = createSlice({
@@ -15,12 +14,11 @@ const filesSlice = createSlice({
   extraReducers:(builder)=>{
     builder.addCase(uploadFile.pending, (state)=>{
       state.loading = true
-      state.loadingFiles = "pending"
+    
+      console.log("pending")
     })
     builder.addCase(uploadFile.fulfilled, (state, action)=>{
       state.loading = false
-      state.loadingFiles = "fullfiled"
-
       console.log(action.payload)
     })
     builder.addCase(uploadFile.rejected, (state, action)=>{

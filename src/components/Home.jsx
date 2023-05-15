@@ -38,7 +38,12 @@ const Home = ({user}) => {
       dispatch(fetchUserFile(userId));
     }
   }, [loadingFiles, handleDelete]);
-
+// if(!loading){
+//   return <h5>Loading</h5>
+// }
+var arr = [userFiles[0], userFiles[1]]
+console.log(arr)
+var trueFalse = true;
   return (
     <div>
     <p className="titles">Dropbox</p>
