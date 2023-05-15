@@ -1,0 +1,23 @@
+.files{
+    padding: 10px 5px;
+    margin:10px;
+    border-top-left-radius: 15px;
+    background-color: gray;
+    font-size: 20px;
+    color:black;
+}
+.titles{
+    position: absolute;
+    top:-4px;
+    left:10px;
+    font-size: 60px;
+    text-align: start;
+}
+.myHref{
+    color:black;
+}
+.deleteBtn{
+    border:none;
+    outline: none;
+    background: none;
+}

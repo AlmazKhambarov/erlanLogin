@@ -6,14 +6,16 @@
 }
 
 .register__block{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    margin: 0 auto;
+    max-width: 50%;
 }
 
 .register__title{
     font-weight: 400;
     font-size: 25px;
-    line-height: 38px;
+    /* line-height: 38px; */
 }
 
 .register-btn{
@@ -37,10 +39,22 @@
     margin: 0;
     display: block;
     margin: auto;
-    margin-bottom: 22px;
-    padding: 8px 90px;
+    width: 90%;
+    margin-bottom: 12px;
+    padding: 8px 32px;
     outline: none;
     border-radius: 8px;
     border: none;
     border: 0.4px solid #000;
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.d-flex span{
+    font-size: 21px;
+}
+a{
+    color:#61B0DC
 }
